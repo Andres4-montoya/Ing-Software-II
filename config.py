@@ -7,5 +7,10 @@ FROM_NAME = 'App Admin'
 
 # App settings
 SECRET_KEY = '123456789'  # obligatorio cambiar
-DB_PATH = 'data/app.db'
 SESSION_TIMEOUT_SECONDS = 600  # 10 minutos inactividad
+
+
+import os
+DB_PATH = os.path.join(os.getcwd(), "data", "app.db")
+os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
+
