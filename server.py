@@ -60,6 +60,19 @@ def init_db():
     );
     """)
     db.commit()
+    
+     # ⚡ Crear admin si no existe
+    admin_email = "admin@example.com"
+    cur.execute("SELECT id FROM users WHERE email=?", (admin_email,))
+    if not cur.fetchone():
+        pwd = "Admin123!"   # cámbiala luego en el panel
+        password_hash, salt = hash_password(pwd)
+        totp_secret = pyotp.random_base32()
+        cur.execute("INSERT INTO users (email, password_hash, salt, role, totp_secret, is_active) VALUES (?,?,?,?,?,1)",
+                    (admin_email, password_hash, salt, "admin", totp_secret))
+        db.commit()
+        print(f"✅ Usuario admin creado: {admin_email} | Password: {pwd}")
+    
 
 @app.teardown_appcontext
 def close_connection(exception):
