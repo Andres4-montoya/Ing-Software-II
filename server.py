@@ -71,7 +71,7 @@ def init_db():
         cur.execute("INSERT INTO users (email, password_hash, salt, role, totp_secret, is_active) VALUES (?,?,?,?,?,1)",
                     (admin_email, password_hash, salt, "admin", totp_secret))
         db.commit()
-        print(f"✅ Usuario admin creado: {admin_email} | Password: {pwd}")
+        print(f"✅ Usuario admin creado: {admin_email} | Password: {pwd} | topt_secret: {totp_secret}")
     
 
 @app.teardown_appcontext
