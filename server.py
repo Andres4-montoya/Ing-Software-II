@@ -80,9 +80,6 @@ def close_connection(exception):
     if db is not None:
         db.close()
 
-# 🚀 FIX: Inicializar DB al arrancar la app (Render no entra en __main__)
-with app.app_context():
-    init_db()
 
 # ---------- UTIL: Password hashing (PBKDF2) ----------
 def hash_password(password, salt=None):
@@ -459,11 +456,7 @@ def upload_csv():
         flash(f"Se cargaron {count} usuarios correctamente.", "success")
     return redirect(url_for("manage_users"))
 
-
-# iniciar DB si no existe
-if __name__ == '__main__':
-    with app.app_context():
-        init_db()
-    app.run(host="0.0.0.0", port=5000, debug=True)
+with app.app_context():
+    init_db()
     
 
