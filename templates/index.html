@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Inicio - Sistema de Usuarios{% endblock %}
+{% block content %}
+<div class="text-center mt-5">
+  <h1 class="display-4 fw-bold text-primary">Bienvenido al Sistema de Gestión de Usuarios</h1>
+  <p class="lead text-muted mt-3">
+    Administra usuarios con seguridad avanzada: <br>
+    contraseñas seguras, 2FA, bloqueo automático y auditoría.
+  </p>
+
+  <div class="mt-4">
+    <a href="{{ url_for('register') }}" class="btn btn-success btn-lg me-2">
+      🚀 Registrarse
+    </a>
+    <a href="{{ url_for('login') }}" class="btn btn-outline-primary btn-lg">
+      🔑 Iniciar Sesión
+    </a>
+  </div>
+</div>
+
+<!-- Sección de features -->
+<div class="container mt-5">
+  <div class="row text-center">
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title">🔒 Seguridad</h5>
+          <p class="card-text">Autenticación en dos pasos, bloqueo automático tras intentos fallidos y contraseñas cifradas.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title">👥 Roles</h5>
+          <p class="card-text">Gestión de permisos por usuario: administradores y usuarios normales.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title">📊 Auditoría</h5>
+          <p class="card-text">Registro de accesos, cambios de rol, intentos fallidos y actividad de usuarios.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

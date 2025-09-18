@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Usuario</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <main>
+    <h2>Detalle usuario: {{ user.email }}</h2>
+    <p>Rol: {{ user.role }}</p>
+    <p>Activo: {{ 'Sí' if user.is_active else 'No' }}</p>
+    <p>Creado: {{ user.created_at }}</p>
+    <p><a href="/admin/users/{{ user.id }}/confirm_delete">Eliminar usuario (requiere reautenticación)</a></p>
+  </main>
+</body>
+</html>

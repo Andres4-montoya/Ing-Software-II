@@ -1,0 +1,36 @@
+2025-09-18 10:24:20,947 - andresmontoyabedoya100@gmail.com | create_user | Registro de cuenta
+2025-09-18 10:30:28,123 - andresmontoyabedoya100@gmail.com | login | login successful
+2025-09-18 10:37:09,614 - andresmontoyabedoya100@gmail.com | logout | user logged out
+2025-09-18 10:37:39,092 - admin@example.com | login | login successful
+2025-09-18 10:49:32,399 - admin@example.com | session_timeout | auto-logout after inactivity
+2025-09-18 10:50:39,774 - andresmontoyabedoya100@gmail.com | login | login successful
+2025-09-18 10:50:48,044 - andresmontoyabedoya100@gmail.com | logout | user logged out
+2025-09-18 10:51:42,615 - admin@example.com | login | login successful
+2025-09-18 10:54:56,004 - admin@example.com | change_role | user_id=1 to admin
+2025-09-18 10:54:59,682 - admin@example.com | change_role | user_id=1 to user
+2025-09-18 10:55:00,705 - admin@example.com | change_role | user_id=1 to admin
+2025-09-18 10:55:01,235 - admin@example.com | change_role | user_id=1 to user
+2025-09-18 10:55:01,613 - admin@example.com | change_role | user_id=1 to admin
+2025-09-18 10:55:08,440 - admin@example.com | logout | user logged out
+2025-09-18 10:55:27,068 - andresmontoyabedoya100@gmail.com | login | login successful
+2025-09-18 11:00:28,726 - andresmontoyabedoya100@gmail.com | toggle_active | user_id=1 to 0
+2025-09-18 11:00:32,191 - andresmontoyabedoya100@gmail.com | toggle_active | user_id=1 to 1
+2025-09-18 11:00:38,259 - andresmontoyabedoya100@gmail.com | change_role | user_id=1 to user
+2025-09-18 11:00:44,049 - andresmontoyabedoya100@gmail.com | logout | user logged out
+2025-09-18 11:01:46,890 - admin@example.com | login | login successful
+2025-09-18 11:01:53,850 - admin@example.com | toggle_active | user_id=1 to 0
+2025-09-18 11:01:54,508 - admin@example.com | toggle_active | user_id=1 to 1
+2025-09-18 11:09:08,121 - admin@example.com | logout | user logged out
+2025-09-18 11:09:37,774 - admin@example.com | login | login successful
+2025-09-18 11:10:52,294 - admin@example.com | toggle_active | user_id=1 to 0
+2025-09-18 11:10:53,546 - admin@example.com | toggle_active | user_id=1 to 1
+2025-09-18 11:15:54,625 - admin@example.com | logout | user logged out
+2025-09-18 11:16:19,405 - sandref04@gmail.com | create_user | Registro de cuenta
+2025-09-18 11:17:42,667 - sandref04@gmail.com | login | login successful
+2025-09-18 11:17:50,792 - sandref04@gmail.com | logout | user logged out
+2025-09-18 11:18:14,459 - andresmontoyabedoya100@gmail.com | login | login successful
+2025-09-18 11:18:18,514 - andresmontoyabedoya100@gmail.com | logout | user logged out
+2025-09-18 11:18:35,673 - admin@example.com | login | login successful
+2025-09-18 11:18:42,172 - admin@example.com | change_role | user_id=1 to admin
+2025-09-18 11:25:37,447 - admin@example.com | login | login successful
+2025-09-18 11:27:17,574 - admin@example.com | delete_user | deleted sandref04@gmail.com

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Confirmar eliminación de {{ user.email }}</h2>
+<p>Para eliminar este usuario debes confirmar tu contraseña de administrador.</p>
+
+<form method="post" action="{{ url_for('user_detail', user_id=user['id']) }}">
+  <label>Contraseña admin:
+    <input type="password" name="admin_password" required>
+  </label><br/><br/>
+  <button class="btn danger" type="submit">Confirmar eliminación</button>
+  <a href="{{ url_for('manage_users') }}" class="btn">Cancelar</a>
+</form>
+{% endblock %}

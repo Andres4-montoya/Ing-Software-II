@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <main>
+    <h2>Iniciar sesión</h2>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flashes">
+        {% for cat, msg in messages %}
+          <li class="{{cat}}">{{ msg }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <form method="post" id="loginForm">
+      <label>Email: <input type="email" name="email" required></label><br/>
+      <label>Contraseña: <input type="password" name="password" required></label><br/>
+      {% if ask_code %}
+        <label>Código 2FA (6 dígitos): <input type="text" name="code" required pattern="[0-9]{6}"></label><br/>
+      {% endif %}
+      <button type="submit">Entrar</button>
+    </form>
+    <p><a href="/register">Crear cuenta</a></p>
+  </main>
+  <script src="/static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Usuarios registrados</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Rol</th>
+      <th>Activo</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for u in users %}
+    <tr>
+      <td>{{ u['email'] }}</td>
+      <td>{{ u['role'] }}</td>
+      <td>{% if u['is_active'] %}Sí{% else %}No{% endif %}</td>
+      <td>
+        <form method="post" action="/admin/users/{{u.id}}/toggle_role" style="display:inline">
+          <button class="btn" type="submit">Cambiar Rol</button>
+        </form>
+        <form method="post" action="/admin/users/{{u.id}}/toggle_active" style="display:inline">
+          <button class="btn" type="submit">
+            {% if u['is_active'] %}Desactivar{% else %}Activar{% endif %}
+          </button>
+        </form>
+        <!-- Botón eliminar -> GET hacia confirmación -->
+        <form method="get" action="/admin/users/{{u.id}}" style="display:inline">
+          <button class="btn danger" type="submit">Eliminar</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h2>Carga masiva de usuarios (CSV)</h2>
+<form method="post" action="{{ url_for('upload_csv') }}" enctype="multipart/form-data">
+  <label>Archivo CSV:</label>
+  <input type="file" name="csvfile" accept=".csv" required>
+  <button class="btn" type="submit">Validar</button>
+</form>
+{% endblock %}
