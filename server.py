@@ -67,6 +67,10 @@ def close_connection(exception):
     if db is not None:
         db.close()
 
+# 🚀 FIX: Inicializar DB al arrancar la app (Render no entra en __main__)
+with app.app_context():
+    init_db()
+
 # ---------- UTIL: Password hashing (PBKDF2) ----------
 def hash_password(password, salt=None):
     if salt is None:
@@ -447,6 +451,6 @@ def upload_csv():
 if __name__ == '__main__':
     with app.app_context():
         init_db()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
     
 

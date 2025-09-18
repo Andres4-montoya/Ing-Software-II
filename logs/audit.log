@@ -34,3 +34,6 @@
 2025-09-18 11:18:42,172 - admin@example.com | change_role | user_id=1 to admin
 2025-09-18 11:25:37,447 - admin@example.com | login | login successful
 2025-09-18 11:27:17,574 - admin@example.com | delete_user | deleted sandref04@gmail.com
+2025-09-18 12:48:41,631 - andresmontoyabedoya100@gmail.com | login | login successful
+2025-09-18 12:50:18,935 - andresmontoyabedoya100@gmail.com | change_role | user_id=1 to user
+2025-09-18 12:50:19,832 - andresmontoyabedoya100@gmail.com | change_role | user_id=1 to admin
